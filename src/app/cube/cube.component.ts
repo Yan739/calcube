@@ -9,7 +9,7 @@ import { ConverterFaceComponent } from '../faces/converter-face/converter-face.c
   standalone: true,
   imports: [StandardFaceComponent, ScientificFaceComponent, HistoryFaceComponent, ConverterFaceComponent],
   templateUrl: './cube.component.html',
-  styleUrl: './cube.component.scss',
+  styleUrls: ['./cube.component.scss'],
 })
 export class CubeComponent {
   rotation = signal(0);
@@ -29,9 +29,8 @@ export class CubeComponent {
 
   onPointerMove(event: PointerEvent) {
     if (!this.dragging) return;
-
     const delta = event.clientX - this.dragStartX;
-    this.rotation.update(r => r + 0.3);
+    this.rotation.update(r => r + delta * 0.3);
     this.dragStartX = event.clientX;
   }
 

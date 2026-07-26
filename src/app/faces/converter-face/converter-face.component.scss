@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  height: 100%;
+  padding: 1.2rem;
+  background: #2b1a1a;
+  color: white;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+select, input {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #3a2424;
+  color: white;
+}
+
+.result {
+  margin-top: auto;
+  font-size: 1.6rem;
+  text-align: right;
+}

@@ -29,7 +29,7 @@ export class CalcEngineService {
         this.pending = null;
         this.operator = null;
     }
-    
+
     clear() {
         this.display.set('0');
         this.pending = null;
@@ -46,6 +46,7 @@ export class CalcEngineService {
             return a * b;
         case '/':
             return a != 0 ? a / b : NaN;
+        case '^': return Math.pow(a, b);
             default: return b;
         }
 

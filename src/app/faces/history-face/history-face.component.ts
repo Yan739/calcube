@@ -1,9 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CalcEngineService } from '../../services/calc-engine.service';
 
 @Component({
   selector: 'app-history-face',
-  imports: [],
-  templateUrl: './history-face.component.html',
-  styleUrl: './history-face.component.scss',
+  standalone: true,
+  template: `
+    <h3>Historique</h3>
+    @if (engine.history().length === 0) {
+      <p class="empty">Aucun calcul pour l'instant</p>
+    } @else {
+      <ul>
+        @for (entry of engine.history(); track entry) {
+          <li>{{ entry }}</li>
+        }
+      </ul>
+    }
+  `,
+  styleUrls: ['./history-face.component.scss']
 })
-export class HistoryFaceComponent {}
+export class HistoryFaceComponent {
+  engine = inject(CalcEngineService);
+}

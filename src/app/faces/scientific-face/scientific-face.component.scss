@@ -1,0 +1,33 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+  background: #17202b;
+  color: white;
+}
+
+.display {
+  font-size: 1.8rem;
+  text-align: right;
+  padding: 1rem;
+  min-height: 3rem;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+  flex: 1;
+
+  button {
+    border: none;
+    border-radius: 8px;
+    background: #26333f;
+    color: #9fd8e0;
+    font-size: 0.95rem;
+    cursor: pointer;
+
+    &:hover { background: #314252; }
+  }
+}

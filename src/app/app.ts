@@ -3,8 +3,9 @@ import { CubeComponent } from './cube/cube.component';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [CubeComponent],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
+  styleUrls: ['./app.scss'],
 })
 export class App { }

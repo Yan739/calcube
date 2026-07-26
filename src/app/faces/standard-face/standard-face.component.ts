@@ -12,7 +12,7 @@ import { CalcEngineService } from '../../services/calc-engine.service';
       }
     </div>
   `,
-  styleUrl: './standard-face.component.scss'
+  styleUrls: ['./standard-face.component.scss']
 })
 export class StandardFaceComponent {
   engine = inject(CalcEngineService);
