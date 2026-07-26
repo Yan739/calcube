@@ -1,16 +1,18 @@
 <div class="scene">
-  <div
-    class="cube"
-    [style.transform]="'rotateY(' + rotation() + 'deg)'"
-    (pointerdown)="onPointerDown($event)"
-    (pointermove)="onPointerMove($event)"
-    (pointerup)="onPointerUp()"
-    (pointerleave)="onPointerUp()"
-  >
-    <div class="face front"><app-standard-face /></div>
-    <div class="face right"><app-scientific-face /></div>
-    <div class="face back"><app-history-face /></div>
-    <div class="face left"><app-converter-face /></div>
+  <div class="float-wrapper">
+    <div
+      class="cube"
+      [style.transform]="'rotateY(' + rotation() + 'deg)'"
+      (pointerdown)="onPointerDown($event)"
+      (pointermove)="onPointerMove($event)"
+      (pointerup)="onPointerUp()"
+      (pointerleave)="onPointerUp()"
+    >
+      <div class="face front"><app-standard-face /></div>
+      <div class="face right"><app-scientific-face /></div>
+      <div class="face back"><app-history-face /></div>
+      <div class="face left"><app-converter-face /></div>
+    </div>
   </div>
 </div>
 
