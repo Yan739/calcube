@@ -1,11 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { CubeComponent } from './cube/cube.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [CubeComponent],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
-export class App {
-  protected readonly title = signal('calcube');
-}
+export class App { }

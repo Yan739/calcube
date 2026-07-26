@@ -29,7 +29,7 @@ export class CalcEngineService {
         this.pending = null;
         this.operator = null;
     }
-
+    
     clear() {
         this.display.set('0');
         this.pending = null;
